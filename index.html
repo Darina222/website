@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+<TITLE>Кристина Старк</TITLE>
+<style>
+	body {
+		background: #000 url(1.jpg); 
+		color: #DAA520; 
+		background-attachment: fixed; 
+		background-repeat: repeat-x; 
+	}
+   </style>
+
+<meta charset="utf-8">
+<title>Простые часы</title>
+<script>
+function displayTime() {
+	var element = document.getElementById("clock");
+	var now = new Date();
+	element.innerHTML = now.toLocaleTimeString();
+	setTimeout(displayTime, 1000);
+}
+
+window.onload = displayTime;
+</script>
+
+<style>
+#clock {		
+	font: bold 24pt sans;
+	background: #ddf;
+	padding: 10px;
+	border: solid black 2px;
+	border-radius: 10px;
+}
+</style>
+
+<meta charset="utf-8">
+    <title>Название документа</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-right:25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: right;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+    </style>
+
+<style>
+.container {
+    display:inline-block;   
+    position:relative;
+}
+.container div { 
+    display: none;
+    position: absolute; 
+    bottom: 10px; left: 0px; 
+    background-color: rgba(0,0,0,.4); 
+    padding: 5px 5px 5px 10px;
+    color: white
+}
+.container:hover div {
+    display: block 
+}
+</style>
+
+<script>
+var lever = false;
+var textBrightness = 120;
+var fireCount = 15;
+var fireDelta = new Array();
+var step = 10;
+var angle = 30;
+var radius = 10;
+function animate()
+{
+fireDelta[fireCount - step] = Math.random() * 2 - 1;
+var e = document.getElementById("fire");
+var s = "";
+for (var i = 0; i < fireCount; i++) { if (s) s += ", ";
+s += Math.round(fireDelta[(i + fireCount - step) % fireCount] * i) + "px " + (-2 * i -1) + "px " + (2 + i) + "px ";
+s += "rgb(255, " + (255 - i * Math.floor(255 / (fireCount - 1))) + ", 0)";
+}
+e.style.textShadow = s;
+e.style.color = "rgb(" +
+(textBrightness + step % 2) + ", " +
+textBrightness + ", " +
+textBrightness + ")";
+step = (step + 1) % fireCount;
+angle -= 0.8;
+
+if (angle <= 0) angle = Math.PI * 2; var e = document.getElementById("rgb");
+var s = Math.round(Math.cos(angle + Math.PI * 2 / 3) * radius) + "px 4px #0F0";
+e.style.textShadow = s;
+e.style.color = "rgb(" + (255 - step % 2) + ", 255, 255)";
+}
+
+function toggleAnimation()
+{
+for (var i = 0; i < fireCount; i++) fireDelta[i] = Math.random() * 2 - 1; if (lever)
+{
+window.clearInterval(lever);
+lever = false;
+}
+else
+lever = window.setInterval(function() { animate(); }, 100);
+return false;
+}
+toggleAnimation();
+</script>
+
+</HEAD>
+
+<BODY TOPMARGIN=50 BOTTOMMARGIN=100 LEFTMARGIN=100 RIGHTMARGIN=100 TEXT="#0000FF">
+
+<span id="clock"></span>
+
+<H1 ALIGN=CENTER><FONT SIZE=10><ACRONYM TITLE="Кристина Старк является писательницей, которая сейчас живет в Ирландии и, свободно говоря на английском, сочиняет произведения на русском языке."><div class="flame" id="fire">Кристина Старк</div></ACRONYM></H1>
+
+<FONT COLOR="#00FFFF" SIZE=4>
+
+<ul id="navbar">
+<li><a href="Контакты.htm">Контакты</a></li>
+<li><a href="#">Книги</a>
+<ul>
+<li><A HREF="Крылья.htm">Крылья</A></li>
+<li><A HREF="Гончие Лилит.htm">Гончие Лилит</A></li>
+<li><A HREF="Стигмалион.htm">Стигмалион</A></li>
+<li><A HREF="Аспид.htm">Аспид</A></li>
+</ul>
+</li>
+<li><a href="index.html">Главная</a></li>
+<meta http-equiv="refresh" content="-1">
+</ul>
+
+<FONT COLOR="#00FFFF" SIZE=5>
+<P><div class="container">
+    <img src="Все книги.jpg" alt="background-image">
+    <div>"Аспид" - новая книга Кристины Старк, выпущенная издательством "АСТ" в 2020 году»
+    </div>
+</div>
+
+<P ALIGN=CENTER><FONT COLOR="#FF1493"><CITE><B>Кристина Старк</B></CITE></FONT><FONT COLOR="#FFFFE0"> - известная украинско‑ирландская писательница. Автор популярных молодежных романов «Крылья», «Гончие Лилит», «Стигмалион» и не только.
+
+<P><FONT COLOR="#00FF00"><MARQUEE BEHAVIOR="ALTERNATE" SCROLLAMOUNY=15"DIRECTION="RIGHT">Слоганами книг стали говорящие фразы «Каждый найдет своего дьявола, если будет искать достаточно усердно» и «Чужое прикосновение может меня убить».</MARQUEE>
+
+<P><FONT COLOR="#FFFFE0">По словам Кристины, ее писательская карьера началась в 2010-х годах с создания набросков в жанре фантастического любовного романа, а также публикации в Интернете литературных заметок, небольших очерков и лирических стихов. А через некоторое время начинающему автору пришло в голову написать полноценное произведение, отличное от существовавших повестей и романов, которое в повествовании о любовных отношениях содержало бы элементы хоррора и триллера.
+<P>Разместив первые главы книги под названием «Крылья» в специально созданной во «ВКонтакте» группе, Старк не до конца понимала, как будут развиваться дальнейшие события, и составляла литературный пазл по кусочкам во время визитов в Каир и Йоханнесбург.
+<P>Поначалу девушке, не привыкшей писать длинные тексты, не хватало времени и усидчивости, и она искала внешней поддержки, представляя отрывки на суд читателей — подписчиков социальных сетей — «Твиттера» и «Фейсбука».
+<P>В итоге в начале 2010-х годов, когда появились последние страницы произведения, на Кристину обратила внимание Тата Анастасян, бывшая редактором крупного московского издательства, и право на публикацию дебютной рукописи приобрела компания «АСТ».
+<P>В интернете можно найти сотни рецензий на произведения писательницы. Читатели искренне восхищаются творчеством Кристины, называя ее одной из лучших авторов книг в жанре фэнтези. Люди говорят, что Кристина Старк по-настоящему умеет увлечь, бережно и подробно раскрывая обстоятельства жизни героев, показывая, как меняются их характеры по ходу повествования.
+<P>Старк создает в каждом своем романе уникальный мир, и порой сложно поверить, что над такими разными по стилю и атмосфере произведениями работал один и тот же человек. Легкие, увлекательные, полные сильных духом героев книги придутся по душе поклонникам подобной литературы.
+
+<P ALIGN=CENTER><IMG SRC="2.jpg" HEIGHT="400" WIDTH="300" USEMAP="2.jpg#автор" USEMAP="2.jpg#книги">
+<MAP NAME="автор"> <AREA SHAPE="rect" COORDS="0,0,200,200" TITLE="Об авторе" HREF="https://kristinastark.eu/about/" TARGET="_BLANK"
+MAP NAME="книги"> <AREA SHAPE="circle" COORDS="0,0,300,300" TITLE="Книги автора" HREF="https://www.litres.ru/kristina-stark/" TARGET="_BLANK"></MAP>
+
+<P><H4>Небольшая информация о книгах:
+<P><style type="text/css">
+table {
+border-collapse: collapse;
+}
+table th,
+table td {
+padding: 30 50 10px;
+border: 3px solid #FFA500;
+text-align: center;
+}
+</style>
+<table>
+<tr>
+<td rowspan="2"></td>
+</tr>
+<tr>
+<td><FONT COLOR="#E0FFFF">Дата выхода</td>
+<td><FONT COLOR="#E0FFFF">Количество страниц</td>
+</tr>
+<tr>
+<td><FONT COLOR="#ADFF2F">"Крылья"</td>
+<td><FONT COLOR="#ADFF2F">2015 год</td>
+<td><FONT COLOR="#ADFF2F">580 стр.</td>
+</tr>
+<tr>
+<td><FONT COLOR="#00FA9A">"Гончие Лилит"</td>
+<td><FONT COLOR="#00FA9A">2016 год</td>
+<td><FONT COLOR="#00FA9A">480 стр.</td>
+</tr>
+<tr>
+<td><FONT COLOR="#7B68EE">"Стигмалион"</td>
+<td><FONT COLOR="#7B68EE">2018 год</td>
+<td><FONT COLOR="#7B68EE">420 стр.</td>
+</tr>
+<tr>
+<td><FONT COLOR="#FF00FF">"Аспид"</td>
+<td><FONT COLOR="#FF00FF">2020 год</td>
+<td><FONT COLOR="#FF00FF">430 стр.</td>
+</tr>
+</table>
+
+
+</BODY>
+</HTML>
